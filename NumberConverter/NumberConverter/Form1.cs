@@ -10,9 +10,13 @@ namespace NumberConverter
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string RomanNumber { get; set; }
 
+        MyConverter Converter;
+
         public Form1()
         {
             InitializeComponent();
+
+          Converter = new MyConverter();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,16 +39,7 @@ namespace NumberConverter
 
         private void buttonConvert_Click(object sender, EventArgs e)
         {
-            RomanNumber = ConvertToRomanNumber();
-
-            
-        }
-
-        private string ConvertToRomanNumber()
-        {
-           int numberToConvert = Convert.ToInt32(buttonConvert.Text);
-
-            return " ";
-        }
+            RomanNumber = Converter.ConvertToRomanNumber(ArabianNumber);
+        }        
     }
 }
