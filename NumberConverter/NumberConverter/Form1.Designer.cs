@@ -41,6 +41,7 @@
             textArabianNumbers.Name = "textArabianNumbers";
             textArabianNumbers.Size = new Size(150, 31);
             textArabianNumbers.TabIndex = 0;
+            textArabianNumbers.TextChanged += textArabianNumbers_TextChanged;
             // 
             // textRomanNumbers
             // 
@@ -76,6 +77,7 @@
             buttonConvert.TabIndex = 5;
             buttonConvert.Text = "Convert";
             buttonConvert.UseVisualStyleBackColor = true;
+            buttonConvert.Click += buttonConvert_Click;
             // 
             // Form1
             // 
