@@ -56,9 +56,9 @@
             labelArabianNumbers.AutoSize = true;
             labelArabianNumbers.Location = new Point(75, 49);
             labelArabianNumbers.Name = "labelArabianNumbers";
-            labelArabianNumbers.Size = new Size(77, 25);
+            labelArabianNumbers.Size = new Size(170, 25);
             labelArabianNumbers.TabIndex = 3;
-            labelArabianNumbers.Text = "Arabian:";
+            labelArabianNumbers.Text = "Arabian (max 3999):";
             // 
             // labelRomanNumbers
             // 

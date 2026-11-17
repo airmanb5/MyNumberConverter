@@ -40,6 +40,8 @@ namespace NumberConverter
         private void buttonConvert_Click(object sender, EventArgs e)
         {
             RomanNumber = Converter.ConvertToRomanNumber(ArabianNumber);
+
+            textRomanNumbers.Text = RomanNumber;
         }        
     }
 }
