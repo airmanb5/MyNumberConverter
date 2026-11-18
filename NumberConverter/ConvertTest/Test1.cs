@@ -6,7 +6,7 @@ namespace ConvertTest
     public sealed class ConvertTests
     {
         [TestMethod]
-        public void TestConvert1ResultI()
+        public void TestConvertToRoman1ResultI()
         {
             MyConverter converter = new MyConverter();
 
@@ -16,7 +16,7 @@ namespace ConvertTest
         }
         
         [TestMethod]
-        public void TestConvert3ResultIII()
+        public void TestConvertToRoman3ResultIII()
         {
             MyConverter converter = new MyConverter();
 
@@ -26,7 +26,7 @@ namespace ConvertTest
         }
        
         [TestMethod]
-        public void TestConvert4ResultIV()
+        public void TestConvertToRoman4ResultIV()
         {
             MyConverter converter = new MyConverter();
 
@@ -36,7 +36,7 @@ namespace ConvertTest
         }
        
         [TestMethod]
-        public void TestConvert8ResultVIII()
+        public void TestConvertToRoman8ResultVIII()
         {
             MyConverter converter = new MyConverter();
 
@@ -46,7 +46,7 @@ namespace ConvertTest
         }
 
         [TestMethod]
-        public void TestConvert9ResultIX()
+        public void TestConvertToRoman9ResultIX()
         {
             MyConverter converter = new MyConverter();
 
@@ -56,7 +56,7 @@ namespace ConvertTest
         }
 
         [TestMethod]
-        public void TestConvert19ResultXIX()
+        public void TestConvertToRoman19ResultXIX()
         {
             MyConverter converter = new MyConverter();
 
@@ -66,7 +66,7 @@ namespace ConvertTest
         }
 
         [TestMethod]
-        public void TestConvert3999ResultXIX()
+        public void TestConvertToRoman3999ResultXIX()
         {
             MyConverter converter = new MyConverter();
 
@@ -76,13 +76,73 @@ namespace ConvertTest
         }
 
         [TestMethod]
-        public void TestConvert11ResultXI()
+        public void TestConvertToRoman11ResultXI()
         {
             MyConverter converter = new MyConverter();
 
             string romanNumber = converter.ConvertToRomanNumber(11);
 
             Assert.AreEqual("XI", romanNumber);
+        }
+
+        [TestMethod]
+        public void TestConvertToArabianIResult1()
+        {
+            MyConverter converter = new MyConverter();
+
+            int arabianNumber = converter.ConvertToArabianNumber("I");
+
+            Assert.AreEqual(1, arabianNumber);
+        }
+
+        [TestMethod]
+        public void TestConvertToArabianIVResult4()
+        {
+            MyConverter converter = new MyConverter();
+
+            int arabianNumber = converter.ConvertToArabianNumber("IV");
+
+            Assert.AreEqual(4, arabianNumber);
+        }
+
+        [TestMethod]
+        public void TestConvertToArabianIXResult9()
+        {
+            MyConverter converter = new MyConverter();
+
+            int arabianNumber = converter.ConvertToArabianNumber("IX");
+
+            Assert.AreEqual(9, arabianNumber);
+        }
+
+        [TestMethod]
+        public void TestConvertToArabianXIResult11()
+        {
+            MyConverter converter = new MyConverter();
+
+            int arabianNumber = converter.ConvertToArabianNumber("XI");
+
+            Assert.AreEqual(11, arabianNumber);
+        }
+
+        [TestMethod]
+        public void TestConvertToArabianCDXCIXResult499()
+        {
+            MyConverter converter = new MyConverter();
+
+            int arabianNumber = converter.ConvertToArabianNumber("CDXCIX");
+
+            Assert.AreEqual(499, arabianNumber);
+        }
+
+        [TestMethod]
+        public void TestConvertToArabianMMMCMXCIXResult3999()
+        {
+            MyConverter converter = new MyConverter();
+
+            int arabianNumber = converter.ConvertToArabianNumber("MMMCMXCIX");
+
+            Assert.AreEqual(3999, arabianNumber);
         }
     }
 }

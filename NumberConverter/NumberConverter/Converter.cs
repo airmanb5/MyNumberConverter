@@ -29,17 +29,25 @@ namespace NumberConverter
 
         public int ConvertToArabianNumber(string numberToConvert)
         {
-            int[] arabianValues = { 1000, 900, 500, 400, 90, 100, 40, 50, 9, 10, 4, 5, 1 };
+            int[] arabianValues = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
 
-            string[] romanValues = { "M", "CM", "D", "CD", "XC", "C", "XL", "L", "IX", "X", "IV", "V", "I" };
+            string[] romanValues = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
 
             int arabianNumber = 0;
 
             for (int i = 0; i <= romanValues.Length - 1; i++)
             {
-                while (numberToConvert.Contains(romanValues[i]))
+                while (numberToConvert.StartsWith(romanValues[i]))
                 {
                     arabianNumber += arabianValues[i];
+
+                    if (romanValues[i].Length == 2)
+                    {
+                        numberToConvert = numberToConvert.Remove(0, 2);
+                    }
+                    else
+                    {
+                        numberToConvert = numberToConvert.Remove(0, 1);                    }
                 }
             }
 
