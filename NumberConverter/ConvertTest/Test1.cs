@@ -52,6 +52,36 @@ namespace ConvertTest
 
             string romanNumber = converter.ConvertToRomanNumber(9);
 
+            Assert.AreEqual("IX", romanNumber);
+        }
+
+        [TestMethod]
+        public void TestConvert19ResultXIX()
+        {
+            MyConverter converter = new MyConverter();
+
+            string romanNumber = converter.ConvertToRomanNumber(19);
+
+            Assert.AreEqual("XIX", romanNumber);
+        }
+
+        [TestMethod]
+        public void TestConvert3999ResultXIX()
+        {
+            MyConverter converter = new MyConverter();
+
+            string romanNumber = converter.ConvertToRomanNumber(3999);
+
+            Assert.AreEqual("MMMCMXCIX", romanNumber);
+        }
+
+        [TestMethod]
+        public void TestConvert11ResultXI()
+        {
+            MyConverter converter = new MyConverter();
+
+            string romanNumber = converter.ConvertToRomanNumber(11);
+
             Assert.AreEqual("XI", romanNumber);
         }
     }
