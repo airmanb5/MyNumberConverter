@@ -33,6 +33,8 @@
             labelArabianNumbers = new Label();
             labelRomanNumbers = new Label();
             buttonConvert = new Button();
+            radioButtonToArabian = new RadioButton();
+            radioButtonToRoman = new RadioButton();
             SuspendLayout();
             // 
             // textArabianNumbers
@@ -50,6 +52,7 @@
             textRomanNumbers.Name = "textRomanNumbers";
             textRomanNumbers.Size = new Size(150, 31);
             textRomanNumbers.TabIndex = 2;
+            textRomanNumbers.TextChanged += textRomanNumbers_TextChanged;
             // 
             // labelArabianNumbers
             // 
@@ -79,11 +82,37 @@
             buttonConvert.UseVisualStyleBackColor = true;
             buttonConvert.Click += buttonConvert_Click;
             // 
+            // radioButtonToArabian
+            // 
+            radioButtonToArabian.AutoSize = true;
+            radioButtonToArabian.Location = new Point(522, 132);
+            radioButtonToArabian.Name = "radioButtonToArabian";
+            radioButtonToArabian.Size = new Size(187, 29);
+            radioButtonToArabian.TabIndex = 6;
+            radioButtonToArabian.TabStop = true;
+            radioButtonToArabian.Text = "Convert to Arabian";
+            radioButtonToArabian.UseVisualStyleBackColor = true;
+            radioButtonToArabian.CheckedChanged += radioButtonToArabian_CheckedChanged;
+            // 
+            // radioButtonToRoman
+            // 
+            radioButtonToRoman.AutoSize = true;
+            radioButtonToRoman.Location = new Point(522, 171);
+            radioButtonToRoman.Name = "radioButtonToRoman";
+            radioButtonToRoman.Size = new Size(182, 29);
+            radioButtonToRoman.TabIndex = 7;
+            radioButtonToRoman.TabStop = true;
+            radioButtonToRoman.Text = "Convert to Roman";
+            radioButtonToRoman.UseVisualStyleBackColor = true;
+            radioButtonToRoman.CheckedChanged += radioButtonToRoman_CheckedChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(radioButtonToRoman);
+            Controls.Add(radioButtonToArabian);
             Controls.Add(buttonConvert);
             Controls.Add(labelRomanNumbers);
             Controls.Add(labelArabianNumbers);
@@ -103,5 +132,7 @@
         private Label labelArabianNumbers;
         private Label labelRomanNumbers;
         private Button buttonConvert;
+        private RadioButton radioButtonToArabian;
+        private RadioButton radioButtonToRoman;
     }
 }

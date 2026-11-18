@@ -47,7 +47,8 @@ namespace NumberConverter
                     }
                     else
                     {
-                        numberToConvert = numberToConvert.Remove(0, 1);                    }
+                        numberToConvert = numberToConvert.Remove(0, 1);
+                    }
                 }
             }
 
